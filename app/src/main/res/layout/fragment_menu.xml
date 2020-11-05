@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Fragments.Menu"
+        android:orientation="vertical"
+        >
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="20dp"
+            app:cardElevation="15dp"
+            app:cardCornerRadius="10dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/karachiMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Karachi Map"
+                    />
+
+                <Button
+                    android:id="@+id/pakistanMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Pakistan Map"
+                    />
+                <Button
+                    android:id="@+id/busMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Bus Map"
+                    />
+                <Button
+                    android:id="@+id/metroMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Metro Map"
+                    />
+
+                <Button
+                    android:id="@+id/areaMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Area Map"
+                    />
+                <Button
+                    android:id="@+id/historicMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Historic Map"
+                    />
+
+                <Button
+                    android:id="@+id/otherMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Other Apps"
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</layout>
