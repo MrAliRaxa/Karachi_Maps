@@ -14,7 +14,10 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_alignParentEnd="true"
-            android:layout_margin="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
             >
             <TextView
                 android:layout_width="wrap_content"
@@ -34,7 +37,7 @@
             android:id="@+id/fragmentCountainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@id/fragmentCountainer"
+            android:layout_above="@id/adView"
             android:layout_below="@id/aboutPage"
             />
         <com.google.android.gms.ads.AdView
@@ -44,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
-            ads:adSize="BANNER"
+            ads:adSize="FULL_BANNER"
             ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
         </com.google.android.gms.ads.AdView>
     </RelativeLayout>

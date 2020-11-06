@@ -6,11 +6,11 @@
         android:layout_height="match_parent"
         tools:context=".Fragments.ImageViewerFragment">
 
-        <ImageView
-            android:id="@+id/imageViewer_image"
+
+        <com.github.chrisbanes.photoview.PhotoView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@color/black"
+            android:id="@+id/imageViewer_image"
             />
     </RelativeLayout>
 </layout>

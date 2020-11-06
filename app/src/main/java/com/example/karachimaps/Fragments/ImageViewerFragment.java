@@ -2,6 +2,8 @@ package com.example.karachimaps.Fragments;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
@@ -25,8 +27,9 @@ public class ImageViewerFragment extends Fragment {
     private FragmentImageViewerBinding mDataBinding;
     private static final String TAG = "ImageViewerFragment";
     private InterstitialAd mInterstitialAd;
-    public ImageViewerFragment() {
+    private String actionBarTitle;
 
+    public ImageViewerFragment() {
     }
 
 
@@ -35,27 +38,10 @@ public class ImageViewerFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if(getArguments()!=null){
             imageCommand=getArguments().getInt("ImageCommand");
-        }
+            actionBarTitle=(getArguments().getString("title",""));
 
-        mInterstitialAd = new InterstitialAd(getContext());
-        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());
-        if (mInterstitialAd.isLoaded()) {
-            mInterstitialAd.show();
-        } else {
-            Log.d("TAG", "The interstitial wasn't loaded yet.");
         }
-        mInterstitialAd.setAdListener(new AdListener(){
-            @Override
-            public void onAdLoaded() {
-                super.onAdLoaded();
-            }
-            @Override
-            public void onAdClosed() {
-                super.onAdClosed();
-                mInterstitialAd.loadAd(new AdRequest.Builder().build());
-            }
-        });
+        integrateAdmob();
     }
 
     @Override
@@ -77,6 +63,10 @@ public class ImageViewerFragment extends Fragment {
             Log.d(TAG, "onCreateView: ");
         }
 
+        if(((AppCompatActivity)getActivity()).getSupportActionBar().isShowing()){
+            ActionBar actionBar=((AppCompatActivity)getActivity()).getSupportActionBar();
+            actionBar.setTitle(actionBarTitle);
+        }
         return mDataBinding.getRoot();
     }
 
@@ -88,5 +78,27 @@ public class ImageViewerFragment extends Fragment {
         } else {
             Log.d("TAG", "The interstitial wasn't loaded yet.");
         }
+    }
+
+    private void integrateAdmob(){
+        mInterstitialAd = new InterstitialAd(getContext());
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        } else {
+            Log.d("TAG", "The interstitial wasn't loaded yet.");
+        }
+        mInterstitialAd.setAdListener(new AdListener(){
+            @Override
+            public void onAdLoaded() {
+                super.onAdLoaded();
+            }
+            @Override
+            public void onAdClosed() {
+                super.onAdClosed();
+                mInterstitialAd.loadAd(new AdRequest.Builder().build());
+            }
+        });
     }
 }
