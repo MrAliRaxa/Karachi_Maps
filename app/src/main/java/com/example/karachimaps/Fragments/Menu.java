@@ -1,5 +1,7 @@
 package com.example.karachimaps.Fragments;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -44,6 +46,7 @@ public class Menu extends Fragment {
                 startMap(MapCommand.KARACHI,"Karachi Map");
             }
         });
+
         mDataBinding.pakistanMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,28 +55,40 @@ public class Menu extends Fragment {
 
             }
         });
+
         mDataBinding.busMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startImageView(ImageCommand.BUS_MAP,"Karachi Bus Map");
             }
         });
+
         mDataBinding.metroMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startImageView(ImageCommand.METRO_MAP,"Karachi Metro Map");
             }
         });
+
         mDataBinding.areaMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startImageView(ImageCommand.AREA_MAP,"Karachi Area Map");
             }
         });
+
         mDataBinding.historicMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startImageView(ImageCommand.HISTORIC_MAP,"Karachi Historic Map");
+            }
+        });
+
+        mDataBinding.otherApp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent openPlayStoreApps=new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.otherAppsUrl)));
+                startActivity(openPlayStoreApps);
             }
         });
 

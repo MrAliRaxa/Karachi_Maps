@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -7,10 +7,24 @@
         tools:context=".Fragments.ImageViewerFragment">
 
 
-        <com.github.chrisbanes.photoview.PhotoView
+<!--        <com.github.chrisbanes.photoview.PhotoView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:id="@+id/imageViewer_image"-->
+<!--            />-->
+
+        <com.jsibbold.zoomage.ZoomageView
+            android:id="@+id/imageViewer_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/imageViewer_image"
+            app:zoomage_restrictBounds="false"
+            app:zoomage_animateOnReset="true"
+            app:zoomage_autoResetMode="UNDER"
+            app:zoomage_autoCenter="true"
+            app:zoomage_zoomable="true"
+            app:zoomage_translatable="true"
+            app:zoomage_minScale="0.6"
+            app:zoomage_maxScale="100"
             />
     </RelativeLayout>
 </layout>

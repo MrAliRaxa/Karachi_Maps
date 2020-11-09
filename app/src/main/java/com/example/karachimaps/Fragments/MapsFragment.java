@@ -103,7 +103,7 @@ public class MapsFragment extends Fragment {
             mDataBinding.satelliteMapBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                  googleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+                  googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
                 }
             });
 
