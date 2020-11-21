@@ -8,14 +8,14 @@ allprojects {
     }
 }
 android {
-    compileSdkVersion 30
+    compileSdkVersion 29
     buildToolsVersion "30.0.2"
 
     buildFeatures{
         dataBinding true
     }
     defaultConfig {
-        applicationId "com.example.karachimaps"
+        applicationId 'com.karachi.goldenmapas'
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -48,6 +48,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.google.android.gms:play-services-ads:19.5.0'
     implementation 'com.nambimobile.widgets:expandable-fab:1.0.2'
-    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
     implementation 'com.jsibbold:zoomage:1.3.1'
 }

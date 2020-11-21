@@ -3,4 +3,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="otherAppsUrl">https://play.google.com/store/apps/developer?id=Golden%20Mapas</string>
+    <string name="bannerId">ca-app-pub-8268773338403195/5248182048</string>
+    <string name="interstitialId">ca-app-pub-8268773338403195/9487644105</string>
 </resources>

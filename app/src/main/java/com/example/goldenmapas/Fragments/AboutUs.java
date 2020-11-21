@@ -1,4 +1,4 @@
-package com.example.karachimaps.Fragments;
+package com.example.goldenmapas.Fragments;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -11,8 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.karachimaps.R;
-import com.example.karachimaps.databinding.FragmentAboutUsBinding;
+import com.example.goldenmapas.R;
+import com.example.goldenmapas.databinding.FragmentAboutUsBinding;
 
 
 public class AboutUs extends Fragment {

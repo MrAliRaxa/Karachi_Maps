@@ -1,4 +1,4 @@
-package com.example.karachimaps.Constants;
+package com.example.goldenmapas.Constants;
 
 public class MapCommand {
     public static final int NONE=0;

@@ -1,4 +1,4 @@
-package com.example.karachimaps.Fragments;
+package com.example.goldenmapas.Fragments;
 
 import android.os.Bundle;
 
@@ -12,9 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.karachimaps.Constants.ImageCommand;
-import com.example.karachimaps.R;
-import com.example.karachimaps.databinding.FragmentImageViewerBinding;
+import com.example.goldenmapas.Constants.ImageCommand;
+import com.example.goldenmapas.R;
+import com.example.goldenmapas.databinding.FragmentImageViewerBinding;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
@@ -82,7 +82,7 @@ public class ImageViewerFragment extends Fragment {
 
     private void integrateAdmob(){
         mInterstitialAd = new InterstitialAd(getContext());
-        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.setAdUnitId(getString(R.string.interstitialId));
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
         if (mInterstitialAd.isLoaded()) {
             mInterstitialAd.show();

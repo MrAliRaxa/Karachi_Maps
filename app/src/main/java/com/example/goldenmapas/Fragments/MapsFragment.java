@@ -1,4 +1,4 @@
-package com.example.karachimaps.Fragments;
+package com.example.goldenmapas.Fragments;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,12 +12,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CompoundButton;
 
-import com.example.karachimaps.Constants.MapCommand;
-import com.example.karachimaps.Constants.MapsLatLng;
-import com.example.karachimaps.R;
-import com.example.karachimaps.databinding.FragmentMapsBinding;
+import com.example.goldenmapas.Constants.MapCommand;
+import com.example.goldenmapas.Constants.MapsLatLng;
+import com.example.goldenmapas.R;
+import com.example.goldenmapas.databinding.FragmentMapsBinding;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
@@ -125,7 +124,7 @@ public class MapsFragment extends Fragment {
     }
     private void integrateAdmob(){
         mInterstitialAd = new InterstitialAd(getContext());
-        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.setAdUnitId(getString(R.string.interstitialId));
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
         if (mInterstitialAd.isLoaded()) {
             mInterstitialAd.show();

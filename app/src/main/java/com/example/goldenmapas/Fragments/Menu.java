@@ -1,4 +1,4 @@
-package com.example.karachimaps.Fragments;
+package com.example.goldenmapas.Fragments;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -12,10 +12,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.karachimaps.Constants.ImageCommand;
-import com.example.karachimaps.Constants.MapCommand;
-import com.example.karachimaps.R;
-import com.example.karachimaps.databinding.FragmentMenuBinding;
+import com.example.goldenmapas.Constants.ImageCommand;
+import com.example.goldenmapas.Constants.MapCommand;
+import com.example.goldenmapas.R;
+import com.example.goldenmapas.databinding.FragmentMenuBinding;
 
 public class Menu extends Fragment {
 

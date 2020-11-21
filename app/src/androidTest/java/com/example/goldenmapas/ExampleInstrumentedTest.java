@@ -1,4 +1,4 @@
-package com.example.karachimaps;
+package com.example.goldenmapas;
 
 import android.content.Context;
 
